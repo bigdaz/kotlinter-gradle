@@ -27,12 +27,12 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: ./gradlew assemble
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v2.2.0-rc.1
         with:
           arguments: assemble
 
       - name: ./gradlew check
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v2.2.0-rc.1
         with:
           arguments: check
 
@@ -71,7 +71,7 @@ jobs:
           distribution: 'adopt'
           java-version: ${{ matrix.java }}
 
-      - uses: gradle/gradle-build-action@v2
+      - uses: gradle/gradle-build-action@v2.2.0-rc.1
         with:
           build-root-directory: test-project
           gradle-version: ${{ matrix.gradle }}
@@ -105,7 +105,7 @@ jobs:
           distribution: 'adopt'
           java-version: ${{ matrix.java }}
 
-      - uses: gradle/gradle-build-action@v2
+      - uses: gradle/gradle-build-action@v2.2.0-rc.1
         with:
           build-root-directory: test-project-android
           gradle-version: ${{ matrix.gradle }}
